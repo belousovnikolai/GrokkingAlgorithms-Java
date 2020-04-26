@@ -30,4 +30,20 @@ public class RecursiveSolutions {
     private static int max(int a, int b) {
         return a > b ? a : b;
     }
+
+    public static int binarySearchRecursive(int[] arr, int from, int to, int val) {
+        if (from > to) {
+            return -1;
+        }
+
+        int mid = (to + from) / 2;
+        int guess = arr[mid];
+
+        if (guess == val) {
+            return mid;
+        } else if (guess > val) {
+            return binarySearchRecursive(arr, from, mid - 1, val);
+        }
+        return binarySearchRecursive(arr, mid + 1, to, val);
+    }
 }
