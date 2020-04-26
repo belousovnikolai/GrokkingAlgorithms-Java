@@ -1,4 +1,4 @@
-package algorithms;
+package chapter1.binary_search;
 
 public class BinarySearch {
 
